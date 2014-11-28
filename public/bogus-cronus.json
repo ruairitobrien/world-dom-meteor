@@ -1,0 +1,14 @@
+[
+  {"name":"com.emc.gs.cronus.analysis.configuration",
+   "imports":["javax.validation",
+                   "com.emc.gs.titan.rest-core-client",
+                   "com.emc.gs.titan.rest-core-test"]},
+  {"name":"com.emc.gs.cronus.ingestion",
+  "imports":["org.springframework.boot.spring-boot-gradle-plugin",
+                  "com.emc.gs.titan.titan-gradle-plugin",
+                  "com.emc.gs.cronus.upload.processin.cronus-upload-processing-api",
+
+                  "com.emc.gs.cronus.index.cronus-index-client",
+                  "com.emc.gs.cronus.upload.processing.cronus-upload-processing-client",
+                  "com.emc.gs.titan.rest-core-client"]}
+]
