@@ -1,0 +1,15 @@
+<body>
+{{> content}}
+
+</body>
+
+<template name="projects">
+  <h1>Projects</h1>
+  {{#each listProjects}}
+    {{> project}}
+  {{/each}}
+</template>
+
+<template name="project">
+    <p>{{name}}</p>
+</template>
