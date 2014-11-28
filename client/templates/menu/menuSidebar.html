@@ -17,6 +17,21 @@
             <ul class="submenu">
                 {{> menuProjects}}
             </ul>
+
         </li>
+
+        <li>
+            <a href="#">
+                <i class="fa fa-desktop icon-sidebar"></i>
+                <i class="fa fa-angle-right chevron-icon-sidebar"></i>
+                Running Apps
+                <span class="badge badge-warning span-sidebar">{{> liveAppCount}}</span>
+            </a>
+            <ul class="submenu">
+                {{> menuLiveApps}}
+            </ul>
+
+        </li>
+
     </ul>
 </template>
