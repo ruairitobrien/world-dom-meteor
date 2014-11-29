@@ -10,27 +10,17 @@
     {{! END EXAMPLE ALERT }}
 
     <div class="row">
-        <h1>Projects</h1>
-        {{>listProducts}}
-    </div>
-
-
-    <div class="row">
-        {{>dependencyChart}}
-    </div>
-
-    <div class="row">
         <div class="col-lg-3">
 
             {{! BEGIN TODAY VISITOR TILES }}
             <div class="panel panel-danger panel-square panel-no-border text-center">
                 <div class="panel-heading">
-                    <h3 class="panel-title">REPOSITORIES</h3>
+                    <h3 class="panel-title">LIVE APPS</h3>
                 </div>
                 <div class="panel-body">
-                    <h1 class="bolded tiles-number text-danger">54</h1>
-                    <p class="text-muted"><small>PRODUCTION <strong>20</strong></small></p>
-                    <p class="text-muted"><small>QA <strong>25</strong></small></p>
+                    <h1 class="bolded tiles-number text-danger">{{> liveAppCount}}</h1>
+                    <p class="text-muted"><small>SPACES <strong>999</strong></small></p>
+                    <p class="text-muted"><small>SERVICES <strong>999</strong></small></p>
                 </div>{{! /.panel-body }}
             </div>{{! /.panel panel-success panel-block-color }}
             {{! END TODAY VISITOR TILES }}
@@ -41,12 +31,12 @@
             {{! BEGIN TODAY VISITOR TILES }}
             <div class="panel panel-warning panel-square panel-no-border text-center">
                 <div class="panel-heading">
-                    <h3 class="panel-title">NUMBER APPS</h3>
+                    <h3 class="panel-title">PSAPPS PRODUCTS</h3>
                 </div>
                 <div class="panel-body">
-                    <h1 class="bolded tiles-number text-warning">245</h1>
-                    <p class="text-muted"><small>RELEASED <strong>25</strong></small></p>
-                    <p class="text-muted"><small>UNDER DEVELOPMENT <strong>220</strong></small></p>
+                    <h1 class="bolded tiles-number text-warning">{{> menuProductsCount}}</h1>
+                    <p class="text-muted"><small>PROJECT COUNT <strong>{{> listProjectsCount}}</strong></small></p>
+                    <p class="text-muted"><small>ISSUES FOUND <strong>999</strong></small></p>
                 </div>{{! /.panel-body }}
             </div>{{! /.panel panel-success panel-block-color }}
             {{! END TODAY VISITOR TILES }}
@@ -82,6 +72,18 @@
 
         </div>{{! /.col-sm-6 }}
     </div>{{! /.row }}
+
+    <div class="row">
+        <h1>Projects</h1>
+        {{>listProducts}}
+    </div>
+
+
+    <div class="row">
+        {{>dependencyChart}}
+    </div>
+
+
 
     <div class="row">
         <div class="col-lg-8">

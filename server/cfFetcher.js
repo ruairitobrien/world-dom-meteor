@@ -7,6 +7,12 @@ Meteor.methods({
     },
     listServices: function () {
         return getJson("http://10.73.66.197:9200/stains/service/1");
+    },
+    fetchProducts: function () {
+        return getJson("http://10.73.66.197:9200/stains/product/_search");
+    },
+    fetchProjects: function () {
+        return getJson("http://10.73.66.197:9200/stains/devProject/_search");
     }
 });
 
