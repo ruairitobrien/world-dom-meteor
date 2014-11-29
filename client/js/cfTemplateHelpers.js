@@ -39,12 +39,18 @@ Template.productPage.helpers({
         return Session.get("projectsTotal");
     },
     product: function () {
-        console.dir(Session.get("currentProduct"));
         return Session.get("currentProduct");
     },
     projects: function () {
-        console.dir(Session.get("currentProductProjects"));
         return Session.get("currentProductProjects");
+    }
+});
+
+Template.productPage.events({
+    "click .showPane": function (event, template) {
+        var forPane = event.currentTarget.attributes['data-for'].value;
+        $('.showablePane').hide();
+        $("#pane_"+forPane).show();
     }
 });
 

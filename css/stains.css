@@ -88,3 +88,15 @@ path.arc {
 #dependencyChart {
     height: 850px;
 }
+
+.showPane {
+    cursor:pointer;
+}
+
+.showPane:hover {
+    opacity: 0.5;
+}
+
+.showablePane {
+    display: none;
+}
