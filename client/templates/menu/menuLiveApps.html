@@ -1,0 +1,15 @@
+<template name="menuLiveApps">
+    {{#each apps}}
+        <li><a href="">{{> liveApp}} </a>
+        </li>
+    {{/each}}
+</template>
+
+
+<template name="liveApp">
+    {{name}}
+</template>
+
+<template name="liveAppCount">
+    {{count}}
+</template>
