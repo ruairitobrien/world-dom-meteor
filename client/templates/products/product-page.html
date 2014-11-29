@@ -1,0 +1,18 @@
+<template name="productPage">
+    <h1 class="page-heading">VIEW PRODUCT <small>Your Product in more detail</small></h1>
+    <ol class="breadcrumb default square rsaquo sm">
+        <li><a href="/"><i class="fa fa-home"></i></a></li>
+        <li>Products</li>
+        <li class="active">{{name}}</li>
+    </ol>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4 class="small-title">{{name}} - {{total}} Projects found</h4>
+            <ul class="list-group">
+                {{#each projects}}
+                    <li class="list-group-item"><a href="{{_source.message.link}}">{{_id}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>
