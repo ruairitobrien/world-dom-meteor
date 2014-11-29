@@ -11,8 +11,14 @@ Meteor.methods({
     fetchProducts: function () {
         return getJson("http://10.73.66.197:9200/stains/product/_search");
     },
+    fetchProduct: function (id) {
+        return getJson("http://10.73.66.197:9200/stains/devProject/_search?q=product:"+id);
+    },
     fetchProjects: function () {
         return getJson("http://10.73.66.197:9200/stains/devProject/_search");
+    },
+    fetchProject: function (id) {
+        return getJson("http://10.73.66.197:9200/stains/devProject/_search?"+id);
     }
 });
 

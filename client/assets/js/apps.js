@@ -1,5 +1,7 @@
 Template.menuSidebar.rendered = function () {
 
+
+
     /** SIDEBAR FUNCTION **/
     $('.sidebar-left ul.sidebar-menu li a').click(function () {
         "use strict";

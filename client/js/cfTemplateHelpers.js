@@ -34,6 +34,26 @@ Template.menuProductsCount.helpers({
     }
 });
 
+Template.productPage.helpers({
+    total: function () {
+        return Session.get("projectsTotal");
+    },
+    product: function () {
+        return Session.get("currentProduct");
+    },
+    projects: function () {
+        return Session.get("currentProductProjects");
+    }
+});
+
+Template.productPage.events({
+    "click .showPane": function (event, template) {
+        var forPane = event.currentTarget.attributes['data-for'].value;
+        $('.showablePane').hide();
+        $("#pane_"+forPane).show();
+    }
+});
+
 Template.menuLiveApps.rendered = function () {
     Meteor.call('listLiveApps', function (err, apps) {
         if (err) {
@@ -59,8 +79,6 @@ function populateProducts() {
                 console.log("error occured on receiving data on server. ", err);
             } else {
                 console.log("respJson: ", respJson);
-                console.log("respJson: ", respJson['hits']);
-
                 var products = respJson['hits'];
                 Session.set("products", products['hits']);
                 Session.set("productsCount", products['total']);
@@ -73,7 +91,6 @@ function populateProducts() {
                 console.log("error occured on receiving data on server. ", err);
             } else {
                 console.log("respJson: ", respJson);
-                console.log("respJson: ", respJson['hits']);
 
                 var projects = respJson['hits'];
                 Session.set("projects", projects['hits']);
