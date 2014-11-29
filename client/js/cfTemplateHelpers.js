@@ -35,13 +35,11 @@ Template.menuProductsCount.helpers({
 });
 
 Template.menuLiveApps.rendered = function () {
-    Meteor.call('listLiveApps', function (err, respJson) {
+    Meteor.call('listLiveApps', function (err, apps) {
         if (err) {
             window.alert("Error: " + err.reason);
             console.log("error occured on receiving data on server. ", err);
         } else {
-            console.log("respJson: ", respJson);
-            var apps = respJson._source.applications;
             Session.set("liveApps", apps);
             Session.set("appsCount", apps.length);
         }
