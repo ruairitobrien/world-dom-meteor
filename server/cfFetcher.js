@@ -31,8 +31,6 @@ var getJson = function (url, path) {
             result = currentNode;
         }
 
-        console.log(result);
-
         return result;
     } else {
         console.log("Response issue: ", result.statusCode);
