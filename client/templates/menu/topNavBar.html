@@ -1,0 +1,105 @@
+<template name="topNavBar">
+    <div class="wrapper">
+        <div class="top-navbar">
+            <div class="top-navbar-inner">
+
+                <div class="logo-brand">
+                    <h2>MENU</h2>
+                </div>
+                {{! End Logo brand }}
+
+                <div class="top-nav-content" id="top">
+
+                    {{! Begin button sidebar left toggle }}
+                    <div class="btn-collapse-sidebar-left">
+                        <i class="fa fa-bars"></i>
+                    </div>{{! /.btn-collapse-sidebar-left }}
+                    {{! End button sidebar left toggle }}
+
+                    {{! Begin button sidebar right toggle
+                    <div class="btn-collapse-sidebar-right">
+                        <i class="fa fa-bullhorn"></i>
+                    </div>{{! /.btn-collapse-sidebar-right }}
+                    {{! End button sidebar right toggle }}
+
+                    {{! Begin button nav toggle }}
+                    <div class="btn-collapse-nav" data-toggle="collapse" data-target="#main-fixed-nav">
+                        <i class="fa fa-plus icon-plus"></i>
+                    </div>{{! /.btn-collapse-sidebar-right }}
+                    {{! End button nav toggle }}
+
+
+                    {{! Begin user session nav }}
+                    <ul class="nav-user navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="/img/avatar/avatar.jpg" class="avatar img-circle" alt="Avatar">
+                                Hi, <strong>Bob MacFarlane</strong>
+                            </a>
+                            <ul class="dropdown-menu square primary margin-list-rounded with-triangle">
+                                <li><a href="#">Account setting</a></li>
+                                <li><a href="#">Change password</a></li>
+                                <li><a href="#">My public profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="">Lock screen</a></li>
+                                <li><a href="">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    {{! End user session nav }}
+
+                    {{! Begin Collapse menu nav }}
+                    <div class="collapse navbar-collapse" id="main-fixed-nav">
+                        {{! Begin nav search form }}
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+                        {{! End nav search form }}
+                        <ul class="nav navbar-nav navbar-left">
+                            {{! Begin nav notification }}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="badge badge-danger icon-count">3</span>
+                                    <i class="fa fa-bell"></i>
+                                </a>
+                                <ul class="dropdown-menu square with-triangle">
+                                    <li>
+                                        <div class="nav-dropdown-heading">
+                                            Notifications
+                                        </div>{{! /.nav-dropdown-heading }}
+                                        <div class="nav-dropdown-content scroll-nav-dropdown">
+                                            <ul>
+                                                <li class="unread"><a href="#">
+                                                    <img src="../../../../world-domination-ui/assets/img/avatar/avatar.jpg" class="absolute-left-content img-circle" alt="Avatar">
+                                                    <strong>Dependency</strong> issue discovered - develop
+                                                    <span class="small-caps">17 seconds ago</span>
+                                                </a></li>
+                                                <li class="unread"><a href="#">
+                                                    <img src="../../../../world-domination-ui/assets/img/avatar/avatar.jpg" class="absolute-left-content img-circle" alt="Avatar">
+                                                    <strong>Dependency</strong> issue discovered - release
+                                                    <span class="small-caps">10 minutes ago</span>
+                                                </a></li>
+                                                <li><a href="#">
+                                                    <img src="../../../../world-domination-ui/assets/img/avatar/avatar.jpg" class="absolute-left-content img-circle" alt="Avatar">
+                                                    <strong>Licence</strong> issue discovered - develop
+                                                    <span class="small-caps">40 minutes ago</span>
+                                                </a></li>
+                                            </ul>
+                                        </div>{{! /.nav-dropdown-content scroll-nav-dropdown }}
+                                        <button class="btn btn-primary btn-square btn-block">See all notifications</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            {{! End nav notification }}
+
+                        </ul>
+                    </div>{{! /.navbar-collapse }}
+                    {{! End Collapse menu nav }}
+                </div>{{! /.top-nav-content }}
+            </div>{{! /.top-navbar-inner }}
+        </div>{{! /.top-navbar }}
+        {{! END TOP NAV }}
+    </div>
+</template>

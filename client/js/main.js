@@ -1,20 +1,16 @@
-Template.projects.events = {
+Template.listProducts.listProducts = function () {
+    return Session.get("products");
 };
 
-Template.projects.listProjects = function () {
-    console.dir("here");
-    return Session.get("projects");
+Template.menuProducts.listMenuProducts = function() {
+    return Session.get("products");
 };
 
-Template.menuProjects.listMenuProjects = function() {
-    return Session.get("projects");
+Template.menuProductsCount.menuProductsCount = function() {
+    return Session.get("productsCount");
 };
 
-Template.menuProjectsCount.menuProjectsCount = function() {
-    return Session.get("projectsCount");
-};
-
-Template.menuProjectsCount.rendered = function() {
+Template.menuProductsCount.rendered = function() {
     populateProjects();
 };
 
@@ -25,15 +21,17 @@ Template.dependencyChart.rendered = function() {
 function populateProjects() {
     if(!this._rendered) {
         this._rendered = true;
-        Meteor.call('fetchProjects', function (err, respJson) {
+        Meteor.call('fetchProducts', function (err, respJson) {
             if (err) {
                 window.alert("Error: " + err.reason);
                 console.log("error occured on receiving data on server. ", err);
             } else {
                 console.log("respJson: ", respJson);
-                var projects = respJson._source.message;
-                Session.set("projects", projects);
-                Session.set("projectsCount", projects.length);
+                console.log("respJson: ", respJson['hits']);
+
+                var products = respJson['hits'];
+                Session.set("products", products['hits']);
+                Session.set("productsCount", products['total']);
             }
         });
     }

@@ -1,0 +1,13 @@
+<template name="menuProducts">
+    {{#each listMenuProducts}}
+        <li><a href="">{{> menuProduct}} </a></li>
+    {{/each}}
+</template>
+
+<template name="menuProduct">
+    {{_id}}
+</template>
+
+<template name="menuProductsCount">
+   {{menuProductsCount}}
+</template>
