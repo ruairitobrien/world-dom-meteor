@@ -33,7 +33,6 @@
             // Compute a map from name to node.
             nodes.forEach(function(d) {
                 map[d.name] = d;
-                console.dir(d);
             });
 
             // For each import, construct a link from the source to target node.

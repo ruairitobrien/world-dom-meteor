@@ -1,37 +1,38 @@
 <template name="menuSidebar">
-    <ul class="sidebar-menu">
-        <li>
-            <a href="index.html">
-                <i class="fa fa-dashboard icon-sidebar"></i>
-                Dashboard
-                {{!<span class="label label-success span-sidebar">UPDATED</span>}}
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-desktop icon-sidebar"></i>
-                <i class="fa fa-angle-right chevron-icon-sidebar"></i>
-                Projects
-                <span class="badge badge-warning span-sidebar">{{> menuProjectsCount}}</span>
-            </a>
-            <ul class="submenu">
-                {{> menuProjects}}
-            </ul>
+    {{! BEGIN SIDEBAR LEFT }}
+    <div class="sidebar-left sidebar-nicescroller">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-dashboard icon-sidebar"></i>
+                    Dashboard
+                    {{!<span class="label label-success span-sidebar">UPDATED</span>}}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-desktop icon-sidebar"></i>
+                    <i class="fa fa-angle-right chevron-icon-sidebar"></i>
+                    Products
+                    <span class="badge badge-warning span-sidebar">{{> menuProductsCount}}</span>
+                </a>
+                <ul class="submenu">
+                    {{> menuProducts}}
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-desktop icon-sidebar"></i>
+                    <i class="fa fa-angle-right chevron-icon-sidebar"></i>
+                    Running Apps
+                    <span class="badge badge-warning span-sidebar">{{> liveAppCount}}</span>
+                </a>
+                <ul class="submenu">
+                    {{> menuLiveApps}}
+                </ul>
 
-        </li>
-
-        <li>
-            <a href="#">
-                <i class="fa fa-desktop icon-sidebar"></i>
-                <i class="fa fa-angle-right chevron-icon-sidebar"></i>
-                Running Apps
-                <span class="badge badge-warning span-sidebar">{{> liveAppCount}}</span>
-            </a>
-            <ul class="submenu">
-                {{> menuLiveApps}}
-            </ul>
-
-        </li>
-
-    </ul>
+            </li>
+        </ul>
+    </div>{{! /.sidebar-left }}
+    {{! END SIDEBAR LEFT }}
 </template>
