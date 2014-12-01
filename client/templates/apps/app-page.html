@@ -1,7 +1,50 @@
 <template name="appPage">
 
-    <h3>{{app.name}}</h3>
+    <h1 class="page-heading">{{app.name}}</h1>
+    <ol class="breadcrumb default square rsaquo sm">
+        <li><a href="/"><i class="fa fa-home"></i></a></li>
+        <li>{{app.space}}</li>
+        <li>apps</li>
+        <li class="active">{{app.name}}</li>
+    </ol>
 
-    {{> liveAppDependencyChart }}
+    <!--    <div class="row well" id="dep-message"></div>-->
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Project: {{app.project}}</li>
+                        <li class="list-group-item">Name: {{app.name}}</li>
+                        <li class="list-group-item">Space: {{app.space}}</li>
+
+                        <li class="list-group-item">Instances: {{app.instances}}</li>
+                        <li class="list-group-item">Buildpack: {{app.staging.buildpackUrl}}</li>
+                        <li class="list-group-item">Stack: {{app.staging.stack}}</li>
+                        <li class="list-group-item">Memory: {{app.memory}}</li>
+                        <li class="list-group-item">Disk: {{app.diskQuota}}</li>
+                        <li class="list-group-item">State: {{app.state}}</li>
+                        <li class="list-group-item">
+                            Services:
+                            <ul>
+                                {{#each app.services}}
+                                    <li>{{this}}
+                                    </li>
+
+                                {{/each}}
+
+                            </ul>
+                        </li>
+                        <li class="list-group-item"></li>
+                    </ul>
+                </div>
+                <div class="panel-footer"><a href="{{app.url}}"></a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            {{>flowerChart}}
+        </div>
+    </div>
 
 </template>

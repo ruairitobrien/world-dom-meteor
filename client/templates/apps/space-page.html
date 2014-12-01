@@ -1,0 +1,29 @@
+<template name="spacePage">
+    <h1 class="page-heading">Cloud Foundry Deployments
+        <small> in {{currentSpace}}</small>
+    </h1>
+    <ol class="breadcrumb default square rsaquo sm">
+        <li><a href="/"><i class="fa fa-home"></i></a></li>
+        <li>spaces</li>
+        <li class="active">{{currentSpace}}</li>
+    </ol>
+
+    <div class="row">
+
+        <div class="col-md-8">
+            {{>dependencyChart}}
+        </div>
+
+        <div class="col-md-4">
+            <ul class="list-group">
+                {{#each apps}}
+                    <li class="list-group-item">
+                        <span class="badge">{{space}}</span>
+                        <a href="/apps/{{name}}">{{name}} </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+</template>

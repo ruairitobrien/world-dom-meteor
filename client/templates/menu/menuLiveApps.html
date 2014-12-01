@@ -1,7 +1,9 @@
 <template name="menuLiveApps">
-    {{#each apps}}
-        <li><a href="/apps/{{name}}">{{name}} </a>
+    <li><a href="/spaces/all">All</a></li>
+    {{#each spaces}}
+        <li><a href="/spaces/{{name}}">{{name}} </a>
         </li>
+
     {{/each}}
 </template>
 
