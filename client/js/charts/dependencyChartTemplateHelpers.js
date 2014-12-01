@@ -32,7 +32,6 @@ Template.flowerChart.rendered = function () {
 
 var formatForChart = function (apps) {
     var charData = [];
-    console.log(apps);
     _.each(apps, function (app) {
         var imports = [];
         _.each(app.dependencies, function (dep) {
